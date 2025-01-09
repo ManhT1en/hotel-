@@ -15,7 +15,7 @@ public class Hotel
     private String city;
     private Integer availableRoom;
     private Double price;
-
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     private List<Amenity> amenities;
+    
 }
